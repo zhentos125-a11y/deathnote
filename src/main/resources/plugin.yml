@@ -1,0 +1,27 @@
+name: DeathNote
+version: '${project.version}'
+main: indi.f1xal.ru.DeathNote
+api-version: '1.21'
+authors: [f1xal]
+website: indi.f1xal.ru
+description: Тетрадь смерти — впишите ник жертвы и нажмите «Готово».
+
+commands:
+  deathnote:
+    description: Выдать тетрадь смерти
+    aliases: [dn, notebook]
+    usage: /deathnote [reload|reset|игрок]
+
+permissions:
+  deathnote.use:
+    description: Позволяет использовать /deathnote
+    default: true
+  deathnote.others:
+    description: Позволяет выдавать тетрадь другим игрокам
+    default: op
+  deathnote.reload:
+    description: Позволяет перезагружать конфигурацию
+    default: op
+  deathnote.immune:
+    description: Делает игрока неуязвимым к тетради смерти
+    default: false
